@@ -9,15 +9,17 @@ interface TitleComponentProps {
   color?: string;
   size?: number;
   fontFamily?: string;
+  flex?: number;
 }
 
 const TitleComponent = (props: TitleComponentProps) => {
-  const {title, color, size, fontFamily} = props;
+  const {title, color, size, fontFamily, flex} = props;
   return (
     <Text
       style={[
         globalStyles.text,
         {
+          flex: flex ?? 1,
           fontSize: size ?? 20,
           color: color ?? colors.textColor,
           fontFamily: fontFamily ?? fontFamilies.PoppinsSemiBold,
