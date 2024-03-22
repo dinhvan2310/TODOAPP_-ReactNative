@@ -11,6 +11,7 @@ import {colors} from '../constants/colors';
 import {globalStyles} from '../styles/globalStyles';
 import TagComponent from '../components/TagComponent';
 import SpaceComponent from '../components/SpaceComponent';
+import CircularProgressComponent from '../components/CircularProgressComponent';
 
 const HomeScreen = () => {
   return (
@@ -32,7 +33,7 @@ const HomeScreen = () => {
           onPress={() => {
             console.log('click');
           }}>
-          <TextComponent color="#696B6F" text="Search Tasks" />
+          <TextComponent color={colors.gray2} text="Search Tasks" />
           <SearchNormal1 color={colors.decsColor} size={20} />
         </RowComponent>
       </SectionComponent>
@@ -48,7 +49,7 @@ const HomeScreen = () => {
               </RowComponent>
             </View>
             <View>
-              <TextComponent text="Remain" />
+              <CircularProgressComponent value={50} />
             </View>
           </RowComponent>
         </CardComponent>

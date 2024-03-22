@@ -20,3 +20,12 @@ https://blog.logrocket.com/adding-custom-fonts-react-native/
 
 [Iconsax]('https://www.npmjs.com/package/iconsax-react-native)
 -   `npm i iconsax-react-native react-native-svg`
+
+## Add circular progress bar to your project
+[React Native Circular Progress]('https://github.com/nithinpp69/react-native-circular-progress-indicator')
+-   `npm install react-native-circular-progress-indicator --save`
+    -   Dependencies
+        -   `npm install react-native-svg --save`
+        -   `npm install react-native-reanimated --save`
+    -   > https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/
+
