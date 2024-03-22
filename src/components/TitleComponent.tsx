@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {StyleProp, Text, ViewStyle} from 'react-native';
 import {globalStyles} from '../styles/globalStyles';
 import {fontFamilies} from '../constants/fontFamilies';
 import {colors} from '../constants/colors';
@@ -10,10 +10,11 @@ interface TitleComponentProps {
   size?: number;
   fontFamily?: string;
   flex?: number;
+  textStyles?: StyleProp<ViewStyle>;
 }
 
 const TitleComponent = (props: TitleComponentProps) => {
-  const {title, color, size, fontFamily, flex} = props;
+  const {title, color, size, fontFamily, flex, textStyles} = props;
   return (
     <Text
       style={[
@@ -24,6 +25,7 @@ const TitleComponent = (props: TitleComponentProps) => {
           color: color ?? colors.textColor,
           fontFamily: fontFamily ?? fontFamilies.PoppinsSemiBold,
         },
+        textStyles,
       ]}>
       {title}
     </Text>

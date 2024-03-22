@@ -1,20 +1,25 @@
+import {Element4, Notification, SearchNormal1} from 'iconsax-react-native';
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
+import CardComponent from '../components/CardComponent';
 import Container from '../components/Container';
 import RowComponent from '../components/RowComponent';
 import SectionComponent from '../components/SectionComponent';
 import TextComponent from '../components/TextComponent';
 import TitleComponent from '../components/TitleComponent';
+import {colors} from '../constants/colors';
 import {globalStyles} from '../styles/globalStyles';
-import CardComponent from '../components/CardComponent';
+import TagComponent from '../components/TagComponent';
+import SpaceComponent from '../components/SpaceComponent';
 
 const HomeScreen = () => {
   return (
     <Container>
       <SectionComponent>
         <RowComponent justify="space-between">
-          <Text style={globalStyles.text}>Home Screen</Text>
-          <Text style={globalStyles.text}>Home Screen</Text>
+          <Element4 color={colors.decsColor} size={24} />
+          <Notification color={colors.decsColor} size={24} />
+          {/* <IonIcons name="notifications" size={24} color={colors.decsColor} /> */}
         </RowComponent>
       </SectionComponent>
       <SectionComponent>
@@ -27,8 +32,8 @@ const HomeScreen = () => {
           onPress={() => {
             console.log('click');
           }}>
-          <TextComponent text="Hi Teamfight Tactics" />
-          <Text>132</Text>
+          <TextComponent color="#696B6F" text="Search Tasks" />
+          <SearchNormal1 color={colors.decsColor} size={20} />
         </RowComponent>
       </SectionComponent>
       <SectionComponent>
@@ -37,8 +42,10 @@ const HomeScreen = () => {
             <View style={{flex: 1}}>
               <TitleComponent title="Task progress" />
               <TextComponent text="30/40 tasks done" />
-
-              <TextComponent text="tab" />
+              <SpaceComponent height={12} />
+              <RowComponent justify="flex-start">
+                <TagComponent text="March 22" />
+              </RowComponent>
             </View>
             <View>
               <TextComponent text="Remain" />
