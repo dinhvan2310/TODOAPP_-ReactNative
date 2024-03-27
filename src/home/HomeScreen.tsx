@@ -22,7 +22,7 @@ import CardImageComponent from '../components/CardImageComponent';
 import AvatarGroupComponent from '../components/AvatarGroupComponent';
 import ProgressBarComponent from '../components/ProgressBarComponent';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}: any) => {
   return (
     <View
       style={{
@@ -153,7 +153,9 @@ const HomeScreen = () => {
         }}>
         <TouchableOpacity
           activeOpacity={0.9}
-          onPress={() => {}}
+          onPress={() => {
+            navigation.navigate('AddNewTask');
+          }}
           style={[
             globalStyles.row,
             {
