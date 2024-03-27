@@ -6,19 +6,23 @@ interface CircularProgressComponentProps {
   color?: string;
   maxValue?: number;
   value: number;
+  radius?: number;
 }
 
 const CircularProgressComponent = (props: CircularProgressComponentProps) => {
-  const {color, maxValue, value} = props;
+  const {color, maxValue, value, radius} = props;
   return (
     <CircularProgress
       maxValue={maxValue ?? 100}
       value={value}
+      radius={radius ?? 56}
       valueSuffix="%"
       activeStrokeColor={color ?? colors.blue}
       inActiveStrokeColor={'#3C444A'}
       progressValueColor={colors.textColor}
       showProgressValue={true}
+      activeStrokeWidth={14}
+      inActiveStrokeWidth={14}
     />
   );
 };
