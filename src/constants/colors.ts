@@ -6,5 +6,6 @@ export const colors = {
     gray2: '#696B6F',
     decsColor: '#e6e6e6',
     blue: '#3618e8b3',
+    blue_no_opacity: '#3618e8',
     white: '#fafafa',
 }

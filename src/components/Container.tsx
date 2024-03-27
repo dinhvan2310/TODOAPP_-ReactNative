@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {ScrollView} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import {globalStyles} from '../styles/globalStyles';
 
 interface PropTypes {
@@ -13,7 +13,23 @@ interface PropTypes {
 const Container = (props: PropTypes) => {
   const {children} = props;
 
-  return <ScrollView style={globalStyles.container}>{children}</ScrollView>;
+  return (
+    <View
+      style={[
+        globalStyles.container,
+        {
+          flex: 1,
+        },
+      ]}>
+      <ScrollView
+        style={{
+          flex: 1,
+          flexGrow: 1,
+        }}>
+        {children}
+      </ScrollView>
+    </View>
+  );
 };
 
 export default Container;
