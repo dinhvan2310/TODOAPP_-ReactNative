@@ -34,6 +34,17 @@ const globalStyles = StyleSheet.create({
     borderRadius: 100,
     backgroundColor: colors.blue,
   },
+  cardImage: {
+    borderRadius: 12,
+  },
+  iconContainer: {
+    backgroundColor: 'rgba(0, 0, 0, 0.2)',
+    height: 30,
+    width: 30,
+    borderRadius: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
 export {globalStyles};

@@ -6,4 +6,5 @@ export const colors = {
     gray2: '#696B6F',
     decsColor: '#e6e6e6',
     blue: '#3618e8b3',
+    white: '#fafafa',
 }

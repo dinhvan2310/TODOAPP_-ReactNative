@@ -1,6 +1,11 @@
-import {Element4, Notification, SearchNormal1} from 'iconsax-react-native';
+import {
+  Edit2,
+  Element4,
+  Notification,
+  SearchNormal1,
+} from 'iconsax-react-native';
 import React from 'react';
-import {View} from 'react-native';
+import {TouchableOpacity, View} from 'react-native';
 import CardComponent from '../components/CardComponent';
 import Container from '../components/Container';
 import RowComponent from '../components/RowComponent';
@@ -12,6 +17,8 @@ import {globalStyles} from '../styles/globalStyles';
 import TagComponent from '../components/TagComponent';
 import SpaceComponent from '../components/SpaceComponent';
 import CircularProgressComponent from '../components/CircularProgressComponent';
+import CardImageComponent from '../components/CardImageComponent';
+import AvatarGroupComponent from '../components/AvatarGroupComponent';
 
 const HomeScreen = () => {
   return (
@@ -53,6 +60,52 @@ const HomeScreen = () => {
             </View>
           </RowComponent>
         </CardComponent>
+      </SectionComponent>
+      <SectionComponent>
+        <RowComponent styles={{alignItems: 'flex-start'}}>
+          <View style={{flex: 1}}>
+            <CardImageComponent>
+              <TouchableOpacity
+                onPress={() => {}}
+                style={globalStyles.iconContainer}>
+                <Edit2 color={colors.white} size={20} />
+              </TouchableOpacity>
+              <TitleComponent title="UX Design" />
+              <TextComponent text="Finish wireframe design" />
+
+              <View style={{marginVertical: 28}}>
+                <AvatarGroupComponent />
+              </View>
+              <TextComponent
+                text="Due, 2003-March"
+                color={colors.decsColor}
+                size={12}
+              />
+            </CardImageComponent>
+          </View>
+          <SpaceComponent width={16} />
+          <View style={{flex: 1}}>
+            <CardImageComponent color="#2196F3">
+              <TouchableOpacity
+                onPress={() => {}}
+                style={globalStyles.iconContainer}>
+                <Edit2 color={colors.white} size={20} />
+              </TouchableOpacity>
+              <TitleComponent title="API Payment" />
+              <AvatarGroupComponent />
+            </CardImageComponent>
+            <SpaceComponent height={16} />
+            <CardImageComponent color="#12B57A">
+              <TouchableOpacity
+                onPress={() => {}}
+                style={globalStyles.iconContainer}>
+                <Edit2 color={colors.white} size={20} />
+              </TouchableOpacity>
+              <TitleComponent title="Mobile App" />
+              <TextComponent text="Col3" />
+            </CardImageComponent>
+          </View>
+        </RowComponent>
       </SectionComponent>
     </Container>
   );

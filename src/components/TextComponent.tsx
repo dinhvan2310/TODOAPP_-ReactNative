@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleProp, Text, ViewStyle} from 'react-native';
+import {StyleProp, Text, TextStyle} from 'react-native';
 import {colors} from '../constants/colors';
 import {fontFamilies} from '../constants/fontFamilies';
 import {globalStyles} from '../styles/globalStyles';
@@ -10,7 +10,7 @@ interface TextComponentProps {
   color?: string;
   fontFamily?: string;
   flex?: number;
-  textStyles?: StyleProp<ViewStyle>;
+  textStyles?: StyleProp<TextStyle>;
 }
 
 const TextComponent = (props: TextComponentProps) => {
