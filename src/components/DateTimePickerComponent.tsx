@@ -35,12 +35,12 @@ const DateTimePickerComponent = (props: Props) => {
           <TextComponent
             flex={1}
             text={
-              selected
+              date
                 ? type === 'time'
-                  ? `${selected.getHours()}:${selected.getMinutes()}`
-                  : `${selected.getDate()}/${
-                      selected.getMonth() + 1
-                    }/${selected.getFullYear()}`
+                  ? `${date.getHours()}:${date.getMinutes()}`
+                  : `${date.getDate()}/${
+                      date.getMonth() + 1
+                    }/${date.getFullYear()}`
                 : placeholder
                 ? placeholder
                 : ''
@@ -51,7 +51,23 @@ const DateTimePickerComponent = (props: Props) => {
         </RowComponent>
       </View>
 
-      <Modal visible={isVisibleModalDateTime} transparent animationType="slide">
+      <DatePicker
+        open={isVisibleModalDateTime}
+        modal
+        onCancel={() => {
+          setIsVisibleModalDateTime(false);
+        }}
+        onConfirm={value => {
+          setDate(value);
+          onSelect(value);
+          setIsVisibleModalDateTime(false);
+        }}
+        mode={type ? type : 'datetime'}
+        date={date}
+        locale="vi"
+      />
+
+      {/* <Modal visible={isVisibleModalDateTime} transparent animationType="slide">
         <View
           style={{
             flex: 1,
@@ -90,7 +106,7 @@ const DateTimePickerComponent = (props: Props) => {
             />
           </View>
         </View>
-      </Modal>
+      </Modal> */}
     </>
   );
 };

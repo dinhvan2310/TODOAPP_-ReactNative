@@ -7,6 +7,7 @@ import RowComponent from '../../components/RowComponent';
 import SectionComponent from '../../components/SectionComponent';
 import SpaceComponent from '../../components/SpaceComponent';
 import {TaskModel} from '../../models/TaskModel';
+import {colors} from '../../constants/colors';
 
 const initValue: TaskModel = {
   title: '',
@@ -82,7 +83,13 @@ const AddNewTask = ({navigation}: any) => {
         </RowComponent>
       </SectionComponent>
       <SectionComponent>
-        <Button title="Save" onPress={handleAddNewTask} />
+        <Button
+          title="Save"
+          onPress={() => {
+            handleAddNewTask();
+            navigation.navigate('HomeScreen');
+          }}
+        />
       </SectionComponent>
     </Container>
   );

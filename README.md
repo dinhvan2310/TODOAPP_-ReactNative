@@ -14,7 +14,7 @@
 ## Add custom fonts
 https://blog.logrocket.com/adding-custom-fonts-react-native/
 
-## Add icons
+## Icons
 [React Native Vector Icons]('https://oblador.github.io/react-native-vector-icons/')
 -   `npm install --save react-native-vector-icons`
 -   copy all the fonts from `node_modules/react-native-vector-icons/Fonts` to `assets/fonts`
@@ -23,7 +23,7 @@ https://blog.logrocket.com/adding-custom-fonts-react-native/
 [Iconsax]('https://www.npmjs.com/package/iconsax-react-native)
 -   `npm i iconsax-react-native react-native-svg`
 
-## Add circular progress bar
+## Circular progress bar
 [React Native Circular Progress]('https://github.com/nithinpp69/react-native-circular-progress-indicator')
 -   `npm install react-native-circular-progress-indicator --save`
     -   Dependencies
@@ -31,4 +31,5 @@ https://blog.logrocket.com/adding-custom-fonts-react-native/
         -   `npm install react-native-reanimated --save`
     -   > https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/
 
-
+## Date picker 
+[React Native Date Picker]('https://github.com/henninghall/react-native-date-picker?tab=readme-ov-file#modal')
