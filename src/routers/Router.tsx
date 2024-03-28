@@ -1,7 +1,8 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeScreen from '../home/HomeScreen';
-import AddNewTask from '../task/AddNewTask';
+import HomeScreen from '../screens/home/HomeScreen';
+import AddNewTask from '../screens/task/AddNewTask';
+import SearchScreen from '../screens/search/SearchScreen';
 
 const Router = () => {
   const Stack = createNativeStackNavigator();
@@ -12,6 +13,7 @@ const Router = () => {
       }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="AddNewTask" component={AddNewTask} />
+      <Stack.Screen name="SearchScreen" component={SearchScreen} />
     </Stack.Navigator>
   );
 };

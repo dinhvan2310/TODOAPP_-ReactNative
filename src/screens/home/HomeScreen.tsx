@@ -7,20 +7,20 @@ import {
 } from 'iconsax-react-native';
 import React from 'react';
 import {TouchableOpacity, View} from 'react-native';
-import CardComponent from '../components/CardComponent';
-import Container from '../components/Container';
-import RowComponent from '../components/RowComponent';
-import SectionComponent from '../components/SectionComponent';
-import TextComponent from '../components/TextComponent';
-import TitleComponent from '../components/TitleComponent';
-import {colors} from '../constants/colors';
-import {globalStyles} from '../styles/globalStyles';
-import TagComponent from '../components/TagComponent';
-import SpaceComponent from '../components/SpaceComponent';
-import CircularProgressComponent from '../components/CircularProgressComponent';
-import CardImageComponent from '../components/CardImageComponent';
-import AvatarGroupComponent from '../components/AvatarGroupComponent';
-import ProgressBarComponent from '../components/ProgressBarComponent';
+import CardComponent from '../../components/CardComponent';
+import Container from '../../components/Container';
+import RowComponent from '../../components/RowComponent';
+import SectionComponent from '../../components/SectionComponent';
+import TextComponent from '../../components/TextComponent';
+import TitleComponent from '../../components/TitleComponent';
+import {colors} from '../../constants/colors';
+import {globalStyles} from '../../styles/globalStyles';
+import TagComponent from '../../components/TagComponent';
+import SpaceComponent from '../../components/SpaceComponent';
+import CircularProgressComponent from '../../components/CircularProgressComponent';
+import CardImageComponent from '../../components/CardImageComponent';
+import AvatarGroupComponent from '../../components/AvatarGroupComponent';
+import ProgressBarComponent from '../../components/ProgressBarComponent';
 
 const HomeScreen = ({navigation}: any) => {
   return (
@@ -44,7 +44,7 @@ const HomeScreen = ({navigation}: any) => {
           <RowComponent
             styles={globalStyles.inputContainer}
             onPress={() => {
-              console.log('click');
+              navigation.navigate('SearchScreen');
             }}>
             <TextComponent color={colors.gray2} text="Search Tasks" />
             <SearchNormal1 color={colors.decsColor} size={20} />
