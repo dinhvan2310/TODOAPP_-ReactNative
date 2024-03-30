@@ -20,5 +20,3 @@ buildscript {
 }
 
 apply plugin: "com.facebook.react.rootproject"
-apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services' // <- Add this line

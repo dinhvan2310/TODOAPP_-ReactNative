@@ -20,7 +20,7 @@ const TitleComponent = (props: TitleComponentProps) => {
       style={[
         globalStyles.text,
         {
-          flex: flex ?? 1,
+          flex: flex ?? 0,
           fontSize: size ?? 20,
           color: color ?? colors.textColor,
           fontFamily: fontFamily ?? fontFamilies.PoppinsSemiBold,

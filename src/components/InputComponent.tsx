@@ -76,7 +76,7 @@ const InputComponent = (props: Props) => {
             multiline={multible}
             numberOfLines={numberOfLine}
             textAlignVertical="top"
-            keyboardType={type}
+            keyboardType={type ?? 'default'}
             secureTextEntry={isPassword ? !showPass : false}
             autoCapitalize="none"
           />

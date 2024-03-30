@@ -8,6 +8,10 @@
 -   `chore`: Changes to the build process or auxiliary tools and libraries such as documentation generation
 -   `vendor`: Updates to vendor libraries
 
+## Rebuild android, ios folder
+-   `npm i react-native-eject`
+-   `npx react-native eject`
+
 ## Build project for android
 [React Native CLI]('https://sharecs.net/tao-file-apk-react-native-build-apk-file.html')
 
