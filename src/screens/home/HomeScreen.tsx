@@ -2,6 +2,7 @@ import {
   Add,
   Edit2,
   Element4,
+  Logout,
   Notification,
   SearchNormal1,
 } from 'iconsax-react-native';
@@ -21,8 +22,11 @@ import CircularProgressComponent from '../../components/CircularProgressComponen
 import CardImageComponent from '../../components/CardImageComponent';
 import AvatarGroupComponent from '../../components/AvatarGroupComponent';
 import ProgressBarComponent from '../../components/ProgressBarComponent';
+import auth from '@react-native-firebase/auth';
 
 const HomeScreen = ({navigation}: any) => {
+  const user = auth().currentUser;
+
   return (
     <View
       style={{
@@ -32,12 +36,23 @@ const HomeScreen = ({navigation}: any) => {
         <SectionComponent>
           <RowComponent justify="space-between">
             <Element4 color={colors.decsColor} size={24} />
-            <Notification color={colors.decsColor} size={24} />
+            <View style={{flexDirection: 'row'}}>
+              <TouchableOpacity>
+                <Notification color={colors.decsColor} size={24} />
+              </TouchableOpacity>
+              <SpaceComponent width={16} />
+              <TouchableOpacity
+                onPress={() => {
+                  auth().signOut();
+                }}>
+                <Logout color={colors.decsColor} size={24} />
+              </TouchableOpacity>
+            </View>
             {/* <IonIcons name="notifications" size={24} color={colors.decsColor} /> */}
           </RowComponent>
         </SectionComponent>
         <SectionComponent>
-          <TextComponent text="Hi Teamfight Tactics" />
+          <TextComponent text={`Hi ${user?.email}`} />
           <TitleComponent title="Be productive today" />
         </SectionComponent>
         <SectionComponent>
